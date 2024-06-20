@@ -1,0 +1,42 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix :     <http://www.mobispaces.eu/ontology#> .
+
+:dataset-1710857060790 a dcat:Dataset ;
+  dcat:temporalResolution "T1S"^^xsd:duration ; 
+dcterms:temporal [ a dcterms:PeriodOfTime ;
+    dcat:startDate "2020-02-29 22:00:01"^^xsd:dateTime ; 
+    dcat:endDate   "2020-03-01 21:59:59"^^xsd:dateTime ; 
+  ] ;
+:spatialCoverage [ogc:asWKT "POLYGON((0.0 0.0, 0.0 38.386562, 25.421436 38.386562, 25.421436 0.0, 0.0 0.0))"] ; 
+  dcat:spatialResolutionInMeters "111.19492602323925"^^xsd:decimal ; 
+  dcat:distribution <https://doi.org/10.5281/zenodo.3754481> . 
+
+<https://doi.org/10.5281/zenodo.3754481> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfFrequencyValues ;
+:isMeasurementOfAttribute "shiptype" ;
+    dqv:value "[37.0]f:73909(22.8%), [60.0]f:51555(15.9%), [52.0]f:47094(14.53%), [80.0]f:34645(10.69%), [70.0]f:29952(9.24%)"  
+] .
+<https://doi.org/10.5281/zenodo.3754481> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfFrequencyValues ;
+:isMeasurementOfAttribute "destination" ;
+    dqv:value "[PIRAEUS]f:56421(17.4%), []f:31364(9.67%), [PERAMA]f:23184(7.15%), [AEGEAN SEA]f:14120(4.36%), [FLISVOS]f:13157(4.06%)"  
+] .
+<https://doi.org/10.5281/zenodo.3754481> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfUniqueEntities ;
+:isMeasurementOfAttribute "shipid" ;
+    dqv:value "329"^^xsd:integer  
+] .
+:numOfFrequencyValues a dqv:Metric;
+    skos:definition "Frequency of values computed using RDF-Gen. Reports top-5 most frequent values and the corresponding percentage over the sample used."@en ;
+    dqv:expectedDataType xsd:string .
+:numOfUniqueValues a dqv:Metric;
+    skos:definition "Number of unique values computed using RDF-Gen"@en ;
+    dqv:expectedDataType xsd:integer .
+:numOfUniqueEntities a dqv:Metric;
+    skos:definition "Number of unique entities identified by RDF-Gen"@en ;
+    dqv:expectedDataType xsd:integer .

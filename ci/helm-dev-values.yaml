@@ -1,0 +1,9 @@
+imagePullSecrets:  
+  - name: gitlab-registry-credentials
+
+podAnnotations:
+  app.gitlab.com/app: mobispaces-findability-component
+  app.gitlab.com/env: findability-component
+
+virtuoso:
+  dataGraph: https://w3id.org/mobispaces/datasets/ENG-TEST

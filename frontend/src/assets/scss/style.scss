@@ -1,0 +1,103 @@
+// Variables for customizing themes
+@import "variables";
+
+// Bootstrap Variables
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap-vue/src/index.scss";
+
+// Architect Variables
+@import "themes/layout-variables";
+
+// Bootstrap Imports
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// Layout
+@import "layout/layout";
+
+// Utils
+@import "utils/helpers";
+@import "utils/backgrounds";
+
+// Elements
+@import "elements/buttons";
+@import "elements/dropdown";
+@import "elements/navs";
+@import "elements/badges";
+@import "elements/cards";
+@import "elements/tabs";
+@import "elements/accordions";
+@import "elements/modals";
+@import "elements/progressbar";
+@import "elements/timeline";
+@import "elements/listgroup";
+@import "elements/forms";
+@import "elements/pagination";
+@import "elements/chat";
+@import "elements/popovers-tooltips";
+
+// Plugins
+@import "~vue-toastr/src/vue-toastr.scss";
+@import "~sweetalert2/src/sweetalert2";
+
+// Various
+@import "components/hamburgers";
+@import "components/perfect-scrollbar";
+@import "components/linearicons";
+@import "components/wizard";
+@import "components/chart-boxes";
+@import "components/content-boxes";
+@import "components/profile-boxes";
+@import "components/userpages";
+@import "applications/applications-base";
+
+// Icons
+@import "~pe7-icon/dist/scss/pe-icon-7-stroke.scss";
+@import "~ladda/css/ladda";
+
+// Treeselect
+@import '~@riophae/vue-treeselect/dist/vue-treeselect.css';
+
+// Multiselect
+@import '~vue-multiselect/dist/vue-multiselect.min.css';
+
+// Responsiveness
+@import "layout/responsive/responsive-base";
+
+// Custom changes should be placed in _custom.scss
+@import "custom";

@@ -1,0 +1,42 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix :     <http://www.mobispaces.eu/ontology#> .
+
+:dataset-1710347266730 a dcat:Dataset ;
+  dcat:temporalResolution "T60S"^^xsd:duration ; 
+dcterms:temporal [ a dcterms:PeriodOfTime ;
+    dcat:startDate "2023-12-25 03:43:00"^^xsd:dateTime ; 
+    dcat:endDate   "2024-01-02 04:21:00"^^xsd:dateTime ; 
+  ] ;
+:spatialCoverage [ogc:asWKT "POLYGON((8.695362 44.380802, 8.695362 44.534306, 9.056105 44.534306, 9.056105 44.380802, 8.695362 44.380802))"] ; 
+  dcat:spatialResolutionInMeters "3096.0128677600264"^^xsd:decimal ; 
+  dcat:distribution <https://mobispaces.eu/gtfs/test_metadata> . 
+
+<https://mobispaces.eu/gtfs/test_metadata> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfFrequencyValues ;
+:isMeasurementOfAttribute "service_id" ;
+    dqv:value "[NAT2023-InvFer-Mixte-00]f:227751(25.47%), [I23240-InvSab-Samedi-07]f:211842(23.69%), [I23240-InvFes-Dimanche-06]f:142714(15.96%), [M00230_31-31DFes-Dimanche-00]f:120637(13.49%), [N00230-NatFes-Mixte-00]f:113227(12.66%)"  
+] .
+<https://mobispaces.eu/gtfs/test_metadata> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfFrequencyValues ;
+:isMeasurementOfAttribute "trip_id" ;
+    dqv:value "[10085566-I23240-InvFes-Dimanche-06, 10326491-M00230_31-31DFes-Dimanche-00, 10215507-NAT2023-InvFer-Mixte-00, 10075188-I23240-InvSab-Samedi-07, 10208688-N00230-NatFes-Mixte-00]f:92(0.05%), [10326369-M00230_31-31DFes-Dimanche-00, 10220120-NAT2023-InvFer-Mixte-00, 10206762-N00230-NatFes-Mixte-00, 10068861-I23240-InvSab-Samedi-07, 10080045-I23240-InvFes-Dimanche-06]f:89(0.05%), [10326376-M00230_31-31DFes-Dimanche-00, 10080048-I23240-InvFes-Dimanche-06, 10220119-NAT2023-InvFer-Mixte-00, 10068863-I23240-InvSab-Samedi-07, 10206769-N00230-NatFes-Mixte-00]f:83(0.05%), [10085568-I23240-InvFes-Dimanche-06, 10208689-N00230-NatFes-Mixte-00, 10215508-NAT2023-InvFer-Mixte-00, 10326488-M00230_31-31DFes-Dimanche-00, 10075189-I23240-InvSab-Samedi-07]f:58(0.03%), [10331437-M00230_31-31DFes-Dimanche-00, 10331451-M00230_31-31DFes-Dimanche-00, 10331452-M00230_31-31DFes-Dimanche-00, 10082895-I23240-InvFes-Dimanche-06, 10227774-N00230-NatFes-Mixte-00, 10227769-N00230-NatFes-Mixte-00, 10331476-M00230_31-31DFes-Dimanche-00, 10082885-I23240-InvFes-Dimanche-06, 10082874-I23240-InvFes-Dimanche-06, 10331477-M00230_31-31DFes-Dimanche-00, 10331442-M00230_31-31DFes-Dimanche-00, 10082879-I23240-InvFes-Dimanche-06, 10082886-I23240-InvFes-Dimanche-06, 10082893-I23240-InvFes-Dimanche-06, 10227793-N00230-NatFes-Mixte-00, 10331438-M00230_31-31DFes-Dimanche-00, 10331455-M00230_31-31DFes-Dimanche-00, 10227785-N00230-NatFes-Mixte-00, 10227781-N00230-NatFes-Mixte-00, 10227824-N00230-NatFes-Mixte-00, 10331449-M00230_31-31DFes-Dimanche-00, 10082914-I23240-InvFes-Dimanche-06, 10082888-I23240-InvFes-Dimanche-06, 10331440-M00230_31-31DFes-Dimanche-00, 10082877-I23240-InvFes-Dimanche-06, 10331433-M00230_31-31DFes-Dimanche-00, 10331448-M00230_31-31DFes-Dimanche-00, 10227773-N00230-NatFes-Mixte-00, 10227794-N00230-NatFes-Mixte-00, 10082870-I23240-InvFes-Dimanche-06, 10082878-I23240-InvFes-Dimanche-06, 10331441-M00230_31-31DFes-Dimanche-00, 10082892-I23240-InvFes-Dimanche-06, 10227782-N00230-NatFes-Mixte-00, 10227779-N00230-NatFes-Mixte-00, 10331458-M00230_31-31DFes-Dimanche-00, 10082889-I23240-InvFes-Dimanche-06, 10331454-M00230_31-31DFes-Dimanche-00, 10082897-I23240-InvFes-Dimanche-06, 10227772-N00230-NatFes-Mixte-00, 10227775-N00230-NatFes-Mixte-00, 10331439-M00230_31-31DFes-Dimanche-00, 10082875-I23240-InvFes-Dimanche-06, 10227806-N00230-NatFes-Mixte-00, 10082891-I23240-InvFes-Dimanche-06, 10082913-I23240-InvFes-Dimanche-06, 10082876-I23240-InvFes-Dimanche-06, 10331456-M00230_31-31DFes-Dimanche-00, 10227783-N00230-NatFes-Mixte-00]f:56(0.31%)"  
+] .
+<https://mobispaces.eu/gtfs/test_metadata> dqv:hasQualityMeasurement [    a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf :numOfFrequencyValues ;
+:isMeasurementOfAttribute "trip_headsign" ;
+    dqv:value "[BRIGNOLE FS]f:85612(9.58%), [CARICAMENTO]f:53768(6.01%), [VOLTRI]f:40361(4.51%), [SAMPIERDARENA]f:39144(4.38%), [PONTEDECIMO]f:29798(3.33%)"  
+] .
+:numOfFrequencyValues a dqv:Metric;
+    skos:definition "Frequency of values computed using RDF-Gen. Reports top-5 most frequent values and the corresponding percentage over the sample used."@en ;
+    dqv:expectedDataType xsd:string .
+:numOfUniqueValues a dqv:Metric;
+    skos:definition "Number of unique values computed using RDF-Gen"@en ;
+    dqv:expectedDataType xsd:integer .
+:numOfUniqueEntities a dqv:Metric;
+    skos:definition "Number of unique entities identified by RDF-Gen"@en ;
+    dqv:expectedDataType xsd:integer .

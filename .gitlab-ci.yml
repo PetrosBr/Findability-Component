@@ -1,0 +1,25 @@
+include:
+  - project: 'mobispaces/common/cicd-scripts'
+    ref: 1.7.5
+    file: '/pipelines/maven.yml'
+
+variables:
+  CCI_SKIP_STAGING_DEPLOYMENT: 'true'
+  CCI_SONAR_modules: "backend"
+  CCI_MAVEN_PROJECT_ROOT: "backend"
+  CCI_SKIP_MAVEN_TEST: "true"
+  CCI_DEPLOY_HELM_CHART: registry.res.eng.it/mobispaces/helm/findability-component-backend/master:latest
+  CCI_DEV_DEPLOY_BRANCH: master
+  CCI_DEPLOY_HELM_RELEASE_NAME: sae-dev
+  CCI_SONAR_ALLOW_FAILURE: 'true'
+  CCI_MAVEN_IMAGE: maven:3.8.4-jdk-11
+
+mvn-install-file:
+  image: ${CCI_MAVEN_IMAGE}
+  stage: prepare
+  extends: .job-with-cache
+  variables:
+  script:
+    - cd ${CCI_MAVEN_PROJECT_ROOT} && mvn ${MAVEN_CLI_OPTS} validate
+  cache:
+    policy: pull-push
