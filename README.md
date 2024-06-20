@@ -1,5 +1,9 @@
 # Findability Component
-This is the first version of the Findability Component within Data Governance Platform of MobiSpaces project. Its primary goal is to allow users to create Metadata for their datasets and store them into a Virtuoso database. The metadata are stored in RDF format so that they can be discovered using simple SPARQL queries in the virtuoso SPARQL endpoint. The second version will enhance Findability of MobiSpaces datasets by using a more user-friendly interface (via API) without the use of SPARQL.
+This is the first version of the Findability Component within Data Governance Platform of MobiSpaces project. Its primary goal is to allow users to create Metadata for their datasets and store them into a Virtuoso database. The metadata are stored in RDF format so that they can be discovered using simple SPARQL queries in the virtuoso SPARQL endpoint. The second version will enhance Findability of MobiSpaces datasets by using a more user-friendly interface (via API) without the use of SPARQL. 
+In the second version we have added a parsing service that reads incoming RDF data in ttl format and stores them locally. The user now can either select to mannually insert metadat or import them from other tools that send metadata (in ttl format) to the Findability Component. Other tools are able to send ttl files to the Findability Component via the following command: 
+```
+curl -k -X POST -F "file=@C:\Users\.......ttl" https://DOMAIN_OF_FINDABILITY/sae/api/upload-ttl
+```
 ## Setup
 
 ```
